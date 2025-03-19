@@ -12,7 +12,7 @@ function Home() {
 
   // Récupérer les films depuis l'API backend au chargement du composant
   useEffect(() => {
-    fetch('https://mymoviz-backend-seven-mu.vercel.app/') // ⬅️ Correction de l'URL avec "/api"
+    fetch('https://mymoviz-backend-seven-mu.vercel.app/movies') // ⬅️ Correction de l'URL avec "/api"
       .then(response => response.json())
       .then(data => {
         setMoviesData(data.movies); // ⬅️ Récupération de la liste des films sous "movies"
